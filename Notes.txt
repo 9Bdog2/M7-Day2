@@ -1,0 +1,29 @@
+In redux folder , will create new folders 
+Store, inside store we create index.js
+inside the file we import {createStore} from "redux"
+createStore() tkes 3 arguments
+1)the main reducer of your application
+2)the initial state for your application
+3)an enhancer function, necessary for example the redux devTools
+Number 2 , The initial state for the app is going to be an object just like the initial state for individual component
+export const initialState = {
+	count : 0, 
+}
+
+createStore()
+
+In the redux folder we create reducers folder at the same level
+Inside reducer we create index.js
+Number 1 , the main reducer function, pure js function 
+with the same imput , it will always output the same result without any side-effect
+a reducer is really like a robot, can do a few things, very precise operations
+The purpose of the reducer: take the existing state, the action dispatched and compute the new state of the app 
+The reducer will generte the new state of the application
+export const mainReducer = (state = initialState, action ) => {
+	switch(action.type){
+	..the type of an action is a mandatory action it will describe what the action wants and it will be always a string 
+	default : ..the default case dosen't change the state
+		return state ..default behaviour to not break if an unknown action type is dispatched  
+	
+}
+}
